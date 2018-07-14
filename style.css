@@ -1,0 +1,103 @@
+/* This is a CSS comment.*/
+
+/*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+*/
+
+/* What is CSS?
+    CSS is code that is written to control the "style" of HTML elements
+
+  In css you first write what's called a selector.
+  Selector= Defines what elements of the page a particular style will apply to.
+  Selecting an HTML tag will apply that rule to all tags on the page.
+    Example: p{
+
+  }
+  You can also select elements by "class"
+
+  Use CSS references for attributes and values
+
+CSS style= box-sizing; border-box;
+Example:
+    *{
+     box-sizing: border-box;
+}
+  This makes the calculation of the element size iclude both the border and padding.
+  Once you set the overall width of the box, tweaking padding and or border sizes, the box will always remain the same. (margin is not included in this size)
+
+  To ensure older browsers are able to display it, add browser-specific prefixes.
+Example:
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+You can set box sizes by pixes or percentages.
+ -Set as percentage, the size will change depending on how big the screen is or how encompassing the boxes are.
+ -Set in pixes, it will take exactly that size and will not change no matter how big or small the screen is.
+*/
+
+/* BOX sizing
+Box Sizing
+
+There are four main points that Jessica addressed about box sizing.
+
+    HTML elements are boxes and each box has 4 components.
+    Because there are so many components to each box, it can often be hard to get the size of a box just right.
+
+    There are two techniques you can use to help deal with sizing issues:
+        Set sizes in terms of percentages rather than pixels.
+        Set the box-sizing attribute to border-box for every element
+
+    Different browsers work slightly differently. Sometimes this causes different browsers to display the same code differently.
+
+Box Positioning
+
+    Divs are block elements (as opposed to inline), so by default they take up the entire width of a page.
+    Adding the rule display: flex; to the appropriate CSS will override this behavior and let divs appear next to each other.
+*/
+
+* {
+   outline: 1px solid red !important;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+  margin-top: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+h1 {
+    background-color: #33bebe;
+    color: white;
+    font-size: 48px;
+    font-family: Arial;
+    text-align: bottom left;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 1px;
+    padding-right: 20px;
+    margin: 50;
+}
+
+.screenshot {
+    border: 6px
+    max-width: 460px;
+}
+.description {
+    margin-left: 10px;
+    max-width: 750px;
+    color: #7c8b88
+}
+.app {
+    display: -webkit-flex;
+    display: flex;
+}
